@@ -1,0 +1,4 @@
+<?php
+	
+	//Xiogop::webApp()->render();
+?>

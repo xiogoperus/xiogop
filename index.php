@@ -1,31 +1,19 @@
-<?php 
-/*******************************************************************************
-========  ==========  ==========  ==========  ==========  ==========  ==========
-Xiogop is an open source Content Management System (CMS) provided free for use
- under the GNU General Public License.					
-                                             === xiogoperus@gmail.com ===
-========  ==========  ==========  ==========  ==========  ==========  ==========
-*******************************************************************************/
-
-/**************************************************************************
-===========================================================================
-                         Create Web Application
-===========================================================================
-**************************************************************************/
-
+<?php
 // start session
 ob_start();
 session_start();
-// XIO Security
+// Security
 define('_XIO', TRUE);
 
-// change the following paths if necessary
-$config=dirname(__FILE__).'/config/common.php';
-$xiogop=dirname(__FILE__).'/app/system/core/xiogop.php';
+$config = dirname(__FILE__).'/config/common.config.php';
 
-// remove the following line when in production mode
+$dbConfig = dirname(__FILE__).'/config/db.config.php';
+
+$xiogop = dirname(__FILE__).'/lib/xiogop.class.php';
+
 defined('XIO_DEBUG') or define('XIO_DEBUG',TRUE);
 
 require_once($xiogop);
+
 Xiogop::createWebApp($config)->process();
 ?>
