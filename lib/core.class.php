@@ -12,20 +12,20 @@ class Core
 {
 	public static function getVersion()
 	{
-		return '1.1.0';
+		return 'Xiogop v1.2.0';
 	}
 	public static $app = null;
 	public static function webApp()
 	{
 		return self::$app;
 	}
-	public static function createWebApp($config=null)
+	public static function createWebApp($includes=null)
 	{
-		return self::createApp('General',$config);
+		return self::createApp('General',$includes);
 	}
-	public static function createApp($class,$config=null)
+	public static function createApp($class,$includes=null)
 	{
-		self::$app = new $class($config);
+		self::$app = new $class($includes);
 		return self::$app;
 	}
 }
