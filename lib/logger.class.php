@@ -1,4 +1,7 @@
 <?php
+
+defined('_XIO') or die('No direct script access allowed');
+
 class Logger 
 {
     public static $PATH;
@@ -71,4 +74,3 @@ class Logger
         fclose($this->fp);
     }
 }
-?>

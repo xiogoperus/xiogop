@@ -1,4 +1,7 @@
 <?php
+
+defined('_XIO') or die('No direct script access allowed');
+
 class Config {
     protected static $settings = array();
 
@@ -10,4 +13,3 @@ class Config {
 		self::$settings[$key] = $value;
 	}
 }
-?>

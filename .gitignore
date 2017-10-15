@@ -1,3 +1,5 @@
 nbproject/
 *.sublime-workspace
 .hidden
+public/css/
+logs/

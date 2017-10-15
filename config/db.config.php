@@ -1,4 +1,7 @@
 <?php
+    
+defined('_XIO') or die('No direct script access allowed');
+
 // database
 // host
 define('DBHOST', 'localhost');
@@ -8,5 +11,3 @@ define('DBLOGIN', 'root');
 define('DBPASSWORD', '');
 // name
 define('DBNAME', 'xiogop');
-
-?>

@@ -1,7 +1,10 @@
 <?php
-defined('_XIO') or die('Possible hack attempt!');
+
+defined('_XIO') or die('No direct script access allowed');
+
 // include core class
 require(dirname(__FILE__).'/core.class.php');
+
 class Xiogop extends Core
 {
 	public function __toString()
@@ -9,4 +12,3 @@ class Xiogop extends Core
 		return __CLASS__;
 	}
 }
-?>
