@@ -2,11 +2,8 @@
 
 defined('_XIO') or die('No direct script access allowed');
 
-class HomeController extends Controller {
+class MainApiController extends ApiController {
     public function index() {
-        
-    }
-    public function test() {
         
     }
 }

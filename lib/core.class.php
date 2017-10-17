@@ -6,25 +6,28 @@ require_once(dirname(__FILE__).'/general.class.php');
 
 class Core
 {
-	public static function getVersion()
-	{
+
+	public static function getVersion() {
 		return 'Xiogop v1.2.0';
 	}
+
 	public static $app = null;
+
 	public static $reqFiles = null;
-	public static function webApp()
-	{
+
+	public static function webApp() {
 		return self::$app;
 	}
-	public static function createWebApp($reqFiles=null)
-	{
+
+	public static function createWebApp($reqFiles=null) {
 		self::$reqFiles = $reqFiles;
 		return self::createApp('General');
 	}
-	public static function createApp($class)
-	{
+
+	public static function createApp($class) {
 		self::$app = new $class(self::$reqFiles);
 		return self::$app;
 	}
+	
 }
 

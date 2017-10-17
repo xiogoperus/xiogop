@@ -3,6 +3,7 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class Config {
+
     protected static $settings = array();
 
 	public static function get($key) {
@@ -12,4 +13,5 @@ class Config {
     public static function set($key, $value) {
 		self::$settings[$key] = $value;
 	}
+	
 }

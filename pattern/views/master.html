@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Xiogop framework</title>
+    <base href="/" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h3>Welcome to Xiogop</h3>
+            <nav>
+                <ul>
+                    <li><a href="/home/index">Home</a></li>
+                    <li><a href="/home/test">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="view">
+                <?=Xiogop::$app->view->getContent('content');?>
+            </div>
+        </main>
+        <footer class="footer-block overflow-hidden">
+            <nav>
+                <ul>
+                    <li><a href="/home/index">Home</a></li>
+                    <li><a href="/home/test">Test</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+            <div class="copy">
+                <span>Copyright Xiogop &copy 2017</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

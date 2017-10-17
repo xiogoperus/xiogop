@@ -4,11 +4,15 @@ defined('_XIO') or die('No direct script access allowed');
 
 class Logger 
 {
+
     public static $PATH;
+
     protected static $loggers=array();
  
     protected $name;
+
     protected $file;
+
     protected $fp;
  
     public function __construct($name='info', $file=null){
@@ -33,7 +37,7 @@ class Logger
         return self::$loggers[$name];
     }
  
-    public function log($message){
+    public function log($message, $isPrint = true){
         if(!is_string($message)){
             $this->logPrint($message);
  
@@ -52,7 +56,7 @@ class Logger
         $log.=$message;
         $log.="\n";
  
-        $this->_write($log);
+        $this->_write($log, $isPrint);
     }
  
     public function logPrint($obj){
@@ -64,13 +68,14 @@ class Logger
         $this->log($ob);
     }
  
-    protected function _write($string){
+    protected function _write($string, $isPrint){
         fwrite($this->fp, $string);
  
-        echo $string;
+        echo $isPrint ? $string : '';
     }
  
     public function __destruct(){
         fclose($this->fp);
     }
+    
 }

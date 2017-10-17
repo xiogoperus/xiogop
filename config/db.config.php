@@ -2,12 +2,10 @@
     
 defined('_XIO') or die('No direct script access allowed');
 
-// database
-// host
-define('DBHOST', 'localhost');
-// login
-define('DBLOGIN', 'root');
-// pass
-define('DBPASSWORD', '');
-// name
-define('DBNAME', 'xiogop');
+// database config
+$dbConfig = array(
+	'dbHost' => 'localhost',
+	'login' => 'root',
+	'password' => '',
+	'dbname' => 'xiogop',
+);

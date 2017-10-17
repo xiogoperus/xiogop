@@ -3,9 +3,10 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class Router {
+
 	protected $uri;
 
-	protected $route;
+	protected $routerName;
 
     protected $controller;
 
@@ -29,22 +30,25 @@ class Router {
 	   $this->$uri = urldecode(trim($uri, '/'));
 	   $this->config = $config;
 	   // get defaults
-	   $this->route = $config['defaultRoute'];
+	   $this->routerName = $config['defaultRouter'];
 	   $this->controller = $config['defaultController'];
-	   $this->methodPrefix = $config['keyRoutes'][isset($this->route) ? $this->route : $config['defaultRoute']];
+	   $this->apiController = $config['defaultApiController'];
+	   $this->methodPrefix = $config['keyRouters'][isset($this->routerName) ? $this->routerName : $config['defaultRouter']];
 	   $this->action = $config['defaultAction'];
+	   $this->apiAction = $config['defaultApiAction'];
 	   $this->language = $config['defaultLanguage'];
 
 	   $uriParts = explode('?', $this->$uri);
+	   
 	   // get path
 	   $path = $uriParts[0];
 
 	   $pathParts = explode('/', $path);
-
+	   
 	   if (count($pathParts)) {
-		   if (in_array(strtolower(current($pathParts)), array_keys($config['keyRoutes']))) {
-			   $this->route = strtolower(current($pathParts));
-			   $this->methodPrefix = $config['keyRoutes'][isset($this->route) ? $this->route : $config['defaultRoute']];
+		   if (in_array(strtolower(current($pathParts)), array_keys($config['keyRouters']))) {
+			   $this->routerName = strtolower(current($pathParts));
+			   $this->methodPrefix = $config['keyRouters'][isset($this->routerName) ? $this->routerName : $config['defaultRouter']];
 			   array_shift($pathParts);
 		   } elseif (in_array(strtolower(current($pathParts)), $config['languages'])) {
 			   $this->language = strtolower(current($pathParts));
@@ -60,6 +64,7 @@ class Router {
 		   }
 		   $this->params = $pathParts;
 	   }
+	   echo $this->methodPrefix;
    	}
 
 	public function getUri() {
@@ -78,8 +83,20 @@ class Router {
 		return $this->params;
 	}
 
-	public function getRoute() {
-		return $this->route;
+	public function getApiController() {
+		return $this->apiController;
+	}
+
+    public function getApiAction() {
+		return $this->apiAction;
+	}
+
+    public function getApiParams() {
+		return $this->apiParams;
+	}
+
+	public function getRouter() {
+		return $this->routerName;
 	}
 
     public function getMethodPrefix() {
@@ -89,4 +106,5 @@ class Router {
     public function getLanguage() {
 		return $this->language;
 	}
+	
 }

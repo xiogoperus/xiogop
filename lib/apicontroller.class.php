@@ -2,7 +2,7 @@
 
 defined('_XIO') or die('No direct script access allowed');
 
-class Controller {
+class ApiController {
 
 	protected $data;
 
