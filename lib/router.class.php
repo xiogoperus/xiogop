@@ -46,25 +46,38 @@ class Router {
 	   $pathParts = explode('/', $path);
 	   
 	   if (count($pathParts)) {
+		   $isApi = false;
 		   if (in_array(strtolower(current($pathParts)), array_keys($config['keyRouters']))) {
-			   $this->routerName = strtolower(current($pathParts));
-			   $this->methodPrefix = $config['keyRouters'][isset($this->routerName) ? $this->routerName : $config['defaultRouter']];
+			   $isApi = strtolower(current($pathParts)) == 'api';
+
+			   $this->routerName = $isApi ? str_replace('api', '', strtolower(current($pathParts))) : strtolower(current($pathParts));
+			   
+			   $this->methodPrefix = $isApi ? $config['keyRouters']['api'] : $config['keyRouters'][isset($this->routerName) ? $this->routerName : $config['defaultRouter']];
+			   
 			   array_shift($pathParts);
 		   } elseif (in_array(strtolower(current($pathParts)), $config['languages'])) {
 			   $this->language = strtolower(current($pathParts));
 			   array_shift($pathParts);
 		   }
 		   if (current($pathParts)) {
-			   $this->controller = strtolower(current($pathParts));
-			   array_shift($pathParts);
+				if (!$isApi)
+					$this->controller = strtolower(current($pathParts));
+				else 
+					$this->apiController = strtolower(current($pathParts));
+				array_shift($pathParts);
 		   }
 		   if (current($pathParts)) {
-			   $this->action = strtolower(current($pathParts));
+				if (!$isApi)
+					$this->action = strtolower(current($pathParts));
+				else
+					$this->apiAction = strtolower(current($pathParts));
+			   
 			   array_shift($pathParts);
 		   }
 		   $this->params = $pathParts;
+		   
 	   }
-	   echo $this->methodPrefix;
+	   
    	}
 
 	public function getUri() {

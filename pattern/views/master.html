@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Xiogop framework</title>
+    <title>
+        <?=Xiogop::$app->getTitle();?>
+    </title>
     <base href="/" />
     <link rel="stylesheet" href="./css/main.css" />
 </head>
@@ -14,8 +16,8 @@
             <h3>Welcome to Xiogop</h3>
             <nav>
                 <ul>
-                    <li><a href="/home/index">Home</a></li>
-                    <li><a href="/home/test">Test</a></li>
+                    <li><a href="<?=Xiogop::$app->link('home', 'index');?>"><?=Xiogop::$app->t('home');?></a></li>
+                    <li><a href="<?=Xiogop::$app->link('home', 'test');?>">Test</a></li>
                 </ul>
             </nav>
         </header>

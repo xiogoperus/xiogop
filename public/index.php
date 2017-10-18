@@ -6,7 +6,9 @@ define('ENVIRONMENT', isset($_SERVER['_XIO_ENV']) ? $_SERVER['_XIO_ENV'] : 'dev'
 // root dir
 define('ROOT_DIR', dirname(__DIR__));
 // http root
-define('HTTP_ROOT', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '_UNKNOWN_'));
+define('ROOT_URL', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '_UNKNOWN_'));
+// protocol
+define('PROTOCOL', stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://');
 // directory separator
 define('DS', DIRECTORY_SEPARATOR);
 
