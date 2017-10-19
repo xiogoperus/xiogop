@@ -1,8 +1,8 @@
 ==============================================================================
-Xiogop is an open source Content Management System (CMS) provided free for use
+Xiogop is an open source MVC Mini Framework provided free for use
  under the GNU General Public License.
 ==============================================================================
-=== xiogoperus@gmail.com (Xiogop CMS) ===
+=== xiogoperus@gmail.com ===
 
 Coming soon...
 
