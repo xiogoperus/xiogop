@@ -7,6 +7,6 @@ class MainApiController extends ApiController {
         return $this->app->api->send('hello pupsik');
     }
     public function test() {
-        return $this->app->api->send('kuku');
+        return $this->app->api->send('{"name": "blabla"}');
     }
 }

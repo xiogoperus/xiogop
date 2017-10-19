@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>
-        <?=Xiogop::$app->getTitle();?>
+        <?=Xiogop::app()->getTitle();?>
     </title>
     <base href="/" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -16,14 +16,14 @@
             <h3>Welcome to Xiogop</h3>
             <nav>
                 <ul>
-                    <li><a href="<?=Xiogop::$app->link('home', 'index');?>"><?=Xiogop::$app->t('home');?></a></li>
-                    <li><a href="<?=Xiogop::$app->link('home', 'test');?>">Test</a></li>
+                    <li><a href="<?=Xiogop::app()->link('home', 'index');?>"><?=Xiogop::app()->t('home');?></a></li>
+                    <li><a href="<?=Xiogop::app()->link('home', 'test');?>">Test</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="view">
-                <?=Xiogop::$app->view->getContent('content');?>
+                <?=Xiogop::app()->view->getContent('content');?>
             </div>
         </main>
         <footer class="footer-block overflow-hidden">
@@ -31,6 +31,13 @@
                 <ul>
                     <li><a href="/home/index">Home</a></li>
                     <li><a href="/home/test">Test</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h5>Language</h5>
+                <ul>
+                    <li><a href="<?=Xiogop::app()->swithLanguage('en');?>">En</a></li>
+                    <li><a href="<?=Xiogop::app()->swithLanguage('ru');?>">Ru</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>

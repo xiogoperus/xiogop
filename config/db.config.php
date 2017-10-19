@@ -7,5 +7,5 @@ $dbConfig = array(
 	'dbHost' => '127.0.0.1',
 	'user' => 'root',
 	'password' => '',
-	'dbname' => 'xiogoperus',
+	'dbname' => 'xiogop',
 );

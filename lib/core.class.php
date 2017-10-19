@@ -15,7 +15,7 @@ class Core
 
 	public static $reqFiles = null;
 
-	public static function webApp() {
+	public static function app() {
 		return self::$app;
 	}
 

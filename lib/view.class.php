@@ -58,14 +58,16 @@ class View {
         return $content.PHP_EOL;
 	}
 
-    public function render($templateName = null) {
+    public function render($templateName = null, $data = array()) {
         if (!$this->router) {
             return false;
         }
 
+        $data = is_array($data) ? $data : get_object_vars($data);
+
         $templateName = $templateName ? $templateName : $this->router->getAction();
 
-        $data = $this->data;
+        $this->data = count($this->data) ? $this->data : $data;
 
         $this->path = Xiogop::$app->config['viewPath'].$this->router->getController().DS.$this->router->getMethodPrefix().$templateName.'.html';
 
@@ -78,8 +80,12 @@ class View {
         return $result.PHP_EOL;
     }
 
-	public function getData() {
+	public function getAllData() {
 		return $this->data;
+	}
+
+	public function getData($key = null) {
+		return isset($this->data[$key]) ? $this->data[$key] : '';
 	}
 
     public function getContent($value = null) {
