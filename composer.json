@@ -1,9 +1,0 @@
-{
-    "description": "The Xiogop framework",
-    "name": "xiogop/framework",
-    "type": "project",
-    "license": "MIT",
-    "require": {
-        "leafo/lessphp": "0.4.0"
-    }
-}

@@ -1,6 +1,13 @@
-<?php
+﻿<?php
+// fix php version
+if (version_compare(PHP_VERSION, '5.6.3', '<') ) {
+  exit("Xiogop will only run on PHP version 5 or greater!\n");
+}
+
 // xio true
 define('_XIO', TRUE);
+// directory separator
+define('DS', DIRECTORY_SEPARATOR);
 // mode
 define('ENVIRONMENT', isset($_SERVER['_XIO_ENV']) ? $_SERVER['_XIO_ENV'] : 'dev');
 // root dir
@@ -9,9 +16,8 @@ define('ROOT_DIR', dirname(__DIR__));
 define('ROOT_URL', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '_UNKNOWN_'));
 // protocol
 define('PROTOCOL', stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://');
-// directory separator
-define('DS', DIRECTORY_SEPARATOR);
-
+// stream contents
+define('STDIN', 'php://input');
 switch (ENVIRONMENT)
 {
 	case 'dev':

@@ -13,9 +13,8 @@ class View {
     protected $router;
 
     public static function getDefaultViewPath($router) {
-        $isRouter = $router->getRouter();
         $controllerDir = $router->getController();
-        $templateName = $router->getMethodPrefix().$router->getAction().'.html';
+        $templateName = $router->getAction().'.html';
         return Xiogop::$app->config['viewPath'].$controllerDir.DS.$templateName;
     }
 
@@ -31,11 +30,12 @@ class View {
         if (!$path) {
             $path = self::getDefaultViewPath($this->router);
         }
+        
         if (!file_exists($layoutPath)) {
             Xiogop::$app->logger->log('Template layout file is not found!', false);
         }
         if (!file_exists($path)) {
-            Xiogop::$app->logger->log('Template file is not found!', false);
+            Xiogop::$app->logger->log('Template "'.$path.'" file is not found!', false);
         }
         $this->data = $data;
         $this->layoutPath = $layoutPath;
@@ -46,12 +46,12 @@ class View {
         $this->data = $data;
     }
 
-    public function renderLayout() {
+    public function renderLayout($layout) {
 		$data = $this->data;
 
         ob_start();
         
-        include($this->layoutPath);
+        include(Xiogop::$app->config['viewPath'].$layout.Xiogop::$app->config['viewLayout'].'.html');
 
         $content = ob_get_clean();
 
@@ -69,7 +69,7 @@ class View {
 
         $this->data = count($this->data) ? $this->data : $data;
 
-        $this->path = Xiogop::$app->config['viewPath'].$this->router->getController().DS.$this->router->getMethodPrefix().$templateName.'.html';
+        $this->path = Xiogop::$app->config['viewPath'].$this->router->getMethodPrefix().$this->router->getController().DS.$templateName.'.html';
 
         ob_start();
         

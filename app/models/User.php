@@ -4,6 +4,8 @@ defined('_XIO') or die('No direct script access allowed');
 
 class User extends Model {
 
+    public $id;
+
     public $firstName;
 
     public $lastName;
@@ -12,17 +14,20 @@ class User extends Model {
 
     public $password;
 
-    public $createAt;
+    public $createdAt;
 
     function __construct($data = array()) {
+        parent::__construct();
         if($data) {
-            $this->firstName = $data['firstName'];
-            $this->lastName = $data['lastName'];
-            $this->email = $data['email'];
-            $this->password = $data['password'];
-            $this->createAt = $data['createAt'];
+            $this->setModel($data);
         }
         
    	}
+
+    public function auth($email = '', $password = '') {
+        $table = DB::findOne(  $this->tableName, ' email = :email AND password = :password ', [ ':email' => $email, ':password' => Crypt::base64Encode($password) ]  );
+        var_dump($table); exit;
+        $this->setModel($table);
+	}
 
 }

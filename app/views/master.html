@@ -8,18 +8,27 @@
     </title>
     <base href="/" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/ext/xio.css" />
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <h3>Welcome to Xiogop</h3>
+            <ul class="lang">
+                <li class="en<?=Xiogop::app()->router->getLanguage() == 'en' ? ' active' : '';?>">
+                    <a href="<?=Xiogop::app()->swithLanguage('en');?>"></a>
+                </li>
+                <li class="ru<?=Xiogop::app()->router->getLanguage() == 'ru' ? ' active' : '';?>">
+                    <a href="<?=Xiogop::app()->swithLanguage('ru');?>"></a>
+                </li>
+            </ul>
             <nav>
-                <ul>
+                <ul class="main-nav">
                     <li><a href="<?=Xiogop::app()->link('home', 'index');?>"><?=Xiogop::app()->t('home');?></a></li>
                     <li><a href="<?=Xiogop::app()->link('home', 'test');?>">Test</a></li>
                 </ul>
             </nav>
+
         </header>
         <main>
             <div class="view">
@@ -33,19 +42,28 @@
                     <li><a href="/home/test">Test</a></li>
                 </ul>
             </nav>
-            <nav>
-                <h5>Language</h5>
-                <ul>
-                    <li><a href="<?=Xiogop::app()->swithLanguage('en');?>">En</a></li>
-                    <li><a href="<?=Xiogop::app()->swithLanguage('ru');?>">Ru</a></li>
-                </ul>
-            </nav>
             <div class="clear"></div>
             <div class="copy">
                 <span>Copyright Xiogop &copy 2017</span>
             </div>
         </footer>
     </div>
+    <script src="./js/ext/xio.js"></script>
+    <script type="text/javascript">
+        xs.init({
+            contentElement: document.querySelector('.wrapper'),
+            menuElements: [
+                document.querySelector('nav > .main-nav')
+            ],
+            insertCloneButton: document.querySelector('header'),
+            menuFixed: {
+                isFixed: true,
+                topOffset: 56
+            }
+        }, function(self) {
+            console.log('Xio Init');
+        });
+    </script>
 </body>
 
 </html>

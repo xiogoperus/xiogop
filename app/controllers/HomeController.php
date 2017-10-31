@@ -8,18 +8,17 @@ class HomeController extends Controller {
         parent::__construct($data);
    	}
 
-    public function index($params) {
+    public function index($req, $params) {
         $this->app->setTitle($this->app->t('home'));
-        
-        //$test = $this->model->save(9);
-        //var_dump($this->model->getOne(9));
-        $model = new User();
-        $model->getOne(count($params) ? $params[0] : -1);
-        
-        return $this->app->view->render('index', array('model' => $model));
+         $id = count($params) ? $params[0] : -1;
+         $user = new User();
+         $user->getOne($id);
+        // $token = new Token($id);
+        // $token->save();
+        return $this->app->view->render('index', array('model' => $user));
     }
 
-    public function xren($params) {
+    public function aboutus($req, $params) {
         return $this->app->view->render('xren', array('hello' => 'Hello world'));
     }
 }

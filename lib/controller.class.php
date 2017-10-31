@@ -15,7 +15,7 @@ class Controller {
 	function __construct($data = array()) {
 	   $this->data = $data;
 	   $this->app = Xiogop::$app;
-       $this->params = Xiogop::$app->router->getParams();
+       $this->params = $this->app->router->getParams();
    	}
 
 	public function getData() {

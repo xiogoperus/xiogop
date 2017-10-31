@@ -2,9 +2,7 @@
 
 defined('_XIO') or die('No direct script access allowed');
 
-require '\extension\rb\rb.php';
-
-class Db extends R {
+class Db extends \RedBeanPHP\Facade {
 	public static function isSetDatabase($dbConfig = null, $logger = null) {
 		if (!$dbConfig && !$logger) {
 			return;

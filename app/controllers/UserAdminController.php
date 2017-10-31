@@ -2,39 +2,41 @@
 
 defined('_XIO') or die('No direct script access allowed');
 
-class UserController extends Controller {
+class UserAdminController extends Controller {
 
     public function __construct($data = array()) {
         parent::__construct($data);
    	}
 
-    public function index($params) {
+    public function index($req, $params) {
         $this->app->setTitle($this->app->t('User'));
 
         $model = new User();
         $model->getOne(count($params) ? $params[0] : -1);
-        
         return $this->app->view->render('index', array('model' => $model));
     }
 
-    public function add() {
+    public function add($req, $params) {
         $model = new User(array(
-            'firstName' => 'Vasya',
-            'lastName' => 'Petrov',
-            'email' => 'VasyaPetrov@gmail.com',
-            'password' => 'gfdsgf',
-            'createAt' => '09-12-2024'
+            'firstName' => 'Vasssa',
+            'lastName' => 'Petrssv',
+            'email' => 'Vadov@gmail.com',
+            'password' => Crypt::base64Encode('gfdsgf'),
+            'createdAt' => '09-12-2014'
         ));
-        $id = $model->save();
-        $this->app->redirect('user', 'index', array($id));
+        $id = $model->save(null, 'email');
+        if(!is_null($id)) {
+            $this->app->redirect('user', 'index', array($id));
+        } else {
+            $this->app->errorCode(500, '- Email already exists', true);
+        }
     }
 
-    public function update($params) {
+    public function update($req, $params) {
         $model = new User(array(
             'firstName' => 'Faina',
             'lastName' => 'Rudes',
             'email' => 'fr@gmail.com',
-            'password' => 'fdsgsgf',
             'createAt' => '09-12-2011'
         ));
         
@@ -42,9 +44,9 @@ class UserController extends Controller {
         $this->app->redirect('user', 'index', array($id));
     }
 
-    public function delete($params) {
+    public function delete($req, $params) {
         $model = new User();
         $isRemoved = $model->remove(count($params) ? $params[0] : -1);
-        return $this->app->view->render('test', array('ok' => 'trushed: '.$isRemoved));
+        $this->app->redirect('user', 'index', array($id));
     }
 }

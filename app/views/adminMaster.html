@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        <?=Xiogop::app()->getTitle();?>
+    </title>
+    <base href="/admin" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h3 class="welcome">Welcome to Xiogop Admin Panel</h3>
+            <nav>
+                <ul>
+                    <li><a href="<?=Xiogop::app()->link('home', 'index');?>"><?=Xiogop::app()->t('home');?></a></li>
+                    <li><a href="<?=Xiogop::app()->link('home', 'test');?>">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="view">
+                <?=Xiogop::app()->view->getContent('content');?>
+            </div>
+        </main>
+        <footer class="footer-block overflow-hidden">
+            <div class="clear"></div>
+            <div class="copy">
+                <span>Copyright Xiogop &copy 2017</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

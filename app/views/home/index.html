@@ -1,8 +1,49 @@
-<b>User:</b>
-
-<?php
-    $model = $this->getData('model');
+<div class="page">
+    <h2>Welcome to Xiogop</h2>
+    <?php
+    $test = $this->getData('test');
+    /*$model = $this->getData('model');
     foreach ($model as $value) {
         echo '<div>'.$value.'</div>';
+    }*/
+    ?>
+
+
+        <div id="result">Тут будет ответ от сервера</div><br /><br />
+        <div onclick="SendGet();">Отправить GET запрос через Ajax</div><br />
+
+</div>
+<script type="text/javascript">
+    function getXmlHttp() {
+        var xmlhttp;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (E) {
+                xmlhttp = false;
+            }
+        }
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            xmlhttp = new XMLHttpRequest();
+        }
+        return xmlhttp;
     }
-;?>
+
+    function SendGet() {
+        //отправляю GET запрос и получаю ответ
+        var xmlhttp = getXmlHttp()
+        xmlhttp.open('POST', '/api/main/index', false);
+        var data = {};
+        data.x = '34';
+        data.y = '54';
+        data.z = '35';
+        data.tr = [];
+        xmlhttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xmlhttp.send(JSON.stringify(data));
+        if (xmlhttp.status == 200) {
+            console.log(xmlhttp.responseText);
+        }
+    }
+</script>

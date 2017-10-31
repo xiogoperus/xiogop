@@ -1,0 +1,14 @@
+<div class="page">
+    <h2>User: <span><?=$this->getData('model')->firstName?></span></h2>
+
+    <?php
+        $model = $this->getData('model');
+        foreach ($model as $key => $value) {
+            if ($key != 'password') {
+                echo '<div>'.$value.'</div>';
+            } else {
+                echo '<div>'.Crypt::base64Decode($value).'</div>';
+            }
+        }
+    ?>
+</div>
