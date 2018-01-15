@@ -12,9 +12,9 @@ class Controller {
 
 	protected $app;
 
-	function __construct($data = array()) {
+	function __construct($app, $data = array()) {
 	   $this->data = $data;
-	   $this->app = Xiogop::$app;
+	   $this->app = $app;
        $this->params = $this->app->router->getParams();
    	}
 

@@ -12,10 +12,10 @@ class ApiController {
 
 	protected $app;
 
-	function __construct($data = array()) {
+	function __construct($app, $data = array()) {
 	   $this->data = $data;
-	   $this->app = Xiogop::$app;
-       $this->params = Xiogop::$app->router->getParams();
+	   $this->app = $app;
+       $this->params = $this->app->router->getParams();
    	}
 
 	public function getData() {

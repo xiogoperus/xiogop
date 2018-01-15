@@ -9,19 +9,49 @@ class AuthAdminController extends Controller {
         $this->model = new User();
    	}
 
-    public function index($req, $params) {
+    public function index($req, $res, $params) {
         $this->app->setTitle('Admin Login');
-        $this->model->save();
-        //$this->model->select(array('create_at' => '09-12-2011'), 'first_name', 'ASC');
-        return $this->app->view->render('index');
+        if(count($params) && Lang::hasKey($params[0], 'validations')) {
+           Session::setFlash(Lang::t($params[0], 'validations')); 
+        }
+        
+        if (!Auth::isLogin()) {
+            return $this->app->view->render('index');
+        } else {
+            $res->redirect('home', 'index');
+        }
     }
 
-    public function submit($req, $params) {
+    public function login($req, $res, $params) {
         if ($req->isMethod('POST')) {
             $data = $req->getData();
-            $this->model->auth($data['login'], $data['pass']);
+            if (empty($data['email']) || empty($data['password'])) {
+                $res->redirect('auth', 'index', array('emptyFields'));
+            }
+            if ($this->model->auth($data['email'], $data['password'])) {
+                $token = Auth::getToken();
+                if (!is_null($token)) {
+                    $res->createCookie('token', $token->value);
+                    $res->redirect('home', 'index');
+                } else {
+                    $res->redirect('auth', 'index');
+                }
+            } else {
+                $res->redirect('auth', 'index', array('userNotFound'));
+            }
         } else {
-            $this->app->errorCode(404);
+            $res->errorCode(404);
+        }
+    }
+
+    public function logout($req, $res, $params) {
+        if ($req->isMethod('GET')) {
+            $res->removeCookie('token');
+            Auth::clearToken();
+            $token = Auth::getToken();
+            $res->redirect('auth', 'index');
+        } else {
+            $res->errorCode(404);
         }
     }
 }

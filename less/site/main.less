@@ -1,0 +1,152 @@
+/* Variables */
+@imgPath: '../../public/site/img/';
+/* Rules */
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #545c63;
+    background-image: url('@{imgPath}fbg.png');
+    color: #888;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    overflow: hidden;
+    background-color: #b3bfc3;
+    background-image: url('@{imgPath}wbg.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background-color: #2f9090;
+    color: white;
+    background-image: url('@{imgPath}hbg.png');
+}
+
+header h3.welcome {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 12px;
+}
+
+header ul.lang {
+    list-style: none;
+    float: right;
+    margin: 20px;
+    & > li {
+        float: left;
+        width: 32px;
+        height: 32px;
+        filter: grayscale(20%);
+        &.ru {
+            background-image: url('@{imgPath}lang/ru.png');
+        }
+        &.en {
+            background-image: url('@{imgPath}lang/en.png');
+        }
+        & a {
+            width: inherit;
+            height: inherit;
+            display: block;
+        }
+    }
+}
+
+header nav {
+    overflow: hidden;
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    float: left;
+    margin: 20px 0 0 40px;
+}
+
+header nav ul>li {
+    float: left;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+header nav ul>li a {
+    font-size: 21px;
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    width: 100%;
+    min-height: 312px;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+    background-image: url('@{imgPath}mbg.png');
+}
+
+main .view {
+    height: 100%;
+    padding: 24px;
+    min-height: inherit;
+    color: #666;
+    background-color: rgba(180, 180, 180, 0.4)
+}
+
+main .page {
+    max-width: 900px;
+    padding: 20px;
+    margin: 12px auto;
+    background-color: rgba(245, 245, 245, 0.9);
+}
+
+footer {
+    background-color: #545c63;
+    background-image: url('@{imgPath}fbg.png');
+    overflow: hidden;
+    color: white;
+    height: 220px;
+}
+
+footer .copy {
+    margin: 12px auto;
+    padding: 12px;
+    width: 50%;
+    text-align: center;
+}
+
+footer nav {
+    float: left;
+    overflow: hidden;
+}
+
+footer nav ul {
+    list-style: none;
+    float: left;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+footer nav ul>li {
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+footer nav ul>li a {
+    font-size: 13px;
+    color: white;
+}

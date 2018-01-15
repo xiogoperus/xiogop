@@ -25,9 +25,15 @@ class User extends Model {
    	}
 
     public function auth($email = '', $password = '') {
-        $table = DB::findOne(  $this->tableName, ' email = :email AND password = :password ', [ ':email' => $email, ':password' => Crypt::base64Encode($password) ]  );
-        var_dump($table); exit;
-        $this->setModel($table);
+        $table = DB::findOne(  
+            $this->tableName, 
+            ' email = :email AND password = :password ', 
+            [ ':email' => $email, ':password' => Crypt::base64Encode($password) ]  
+        );
+        if (is_null($table)) {
+            return false;
+        }
+        return Auth::createToken($table->id);
 	}
 
 }

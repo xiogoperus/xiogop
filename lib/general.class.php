@@ -3,17 +3,11 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class General {
-	public $errorMessage = null;
-
 	public $router = null;
-
-	public $request = null;
 
 	public $logger = null;
 
 	public $view = null;
-
-	public $api = null;
 
 	public $config = array();
 
@@ -41,7 +35,7 @@ class General {
 		$logger = new Logger();
 		$this->logger = $logger;
 		$this->title = $config['siteName'];
-		// init variables
+		// config
 		$this->config = $config;
 		$this->dbConfig = $dbConfig;
 		// is set database
@@ -71,43 +65,49 @@ class General {
 
 	public function process() {
 		try {
+			//process config 
+			Config::set('timeCookie', 3600);
 			// start session
 			Session::start();
 			// Db setup
 			$conectionString = 'mysql:host='.$this->dbConfig['dbHost'].';dbname='.$this->dbConfig['dbname'];
 			Db::setup($conectionString, $this->dbConfig['user'], $this->dbConfig['password']);
-
+			$response = new Response($this);
+			$request = Request::getRequestData();
+			$cookieToken = $request->getCookieToken();
+        	Auth::setToken($cookieToken);
 			if ($this->router->getMethodPrefix() == 'api') {
-				$this->api = new Api();
 				$apiControllerClass = ucfirst($this->router->getApiController().'ApiController');
 				if (class_exists($apiControllerClass)) {
-					$controllerObject = new $apiControllerClass();
+					$controllerObject = new $apiControllerClass($this);
 					$apiControllerMethod = strtolower($this->router->getApiAction());
 					if (method_exists($apiControllerClass, $apiControllerMethod)) {
-						$actionMethod = $controllerObject->$apiControllerMethod(Request::getMethodData(), $this->router->getParams());
+						$actionMethod = $controllerObject->$apiControllerMethod($request, $response, $this->router->getParams());
 						print($actionMethod);
 					} else {
-						$this->errorCode(404, '"'.$apiControllerMethod.'"- action not allowed');
+						$response->errorCode(404, '"'.$apiControllerMethod.'"- action not allowed');
 					}
 				} else {
-					$this->errorCode(404, '"'.$this->router->getApiController().'"- controller not allowed');
+					$response->errorCode(404, '"'.$this->router->getApiController().'"- controller not allowed');
 				}
 			} else {
-				$this->view = new View();
-				$this->loadLanguage($this->router->getLanguage());
+				$this->view = new View($this);
+				if (!Lang::load($this)) {
+					$this->logger->log('Language file not found: '.$langFilePath, false);
+				}
 				$controllerClass = ucfirst($this->router->getController()).ucfirst($this->router->getMethodPrefix()).'Controller';
 				if (class_exists($controllerClass)) {
-					$controllerObject = new $controllerClass();
+					$controllerObject = new $controllerClass($this);
 					$controllerMethod = strtolower($this->router->getAction());
 					if (method_exists($controllerClass, $controllerMethod)) {
-						$content = $controllerObject->$controllerMethod(Request::getRequestData(), $this->router->getParams());
+						$content = $controllerObject->$controllerMethod($request, $response, $this->router->getParams());
 						$this->view->setData(compact('content'));
 						print($this->view->renderLayout($this->router->getMethodPrefix()));
 					} else {
-						$this->errorCode(404);
+						$response->errorCode(404);
 					}
 				} else {
-					$this->errorCode(404);
+					$response->errorCode(404);
 				}
 			}
 		}
@@ -117,46 +117,14 @@ class General {
 		
 	}
 
-	public function getURI() {
+	private function getURI() {
 		return $_SERVER['REQUEST_URI'];
 	}
 
-	public function loadLanguage($langCode = 'en') {
-		$langFilePath = ROOT_DIR.DS.'lang'.DS.strtolower($langCode).'.php';
-
-		if(file_exists($langFilePath)) {
-			$this->languageData = include($langFilePath);
-		} else {
-			$this->logger->log('Language file not found: '.$langFilePath, false);
-		}
-	}
-
-	public function swithLanguage($langCode = 'en') {
-		$location = $this->config['baseUrl'].'/'
-		.$langCode.'/'.$this->router->getController().'/'.$this->router->getAction().'/'
-		.implode('/', $this->router->getParams());
-		return $location;
-	}
-
-	public function t($key, $defaultValue = '') {
-		return isset($this->languageData[strtolower($key)]) ? $this->languageData[strtolower($key)] : $defaultValue;
-	}
-
-	public function redirect($controller, $method = 'index', $args = array()) {
-        $location = $this->config['baseUrl'] . '/' . $this->router->getMethodPrefix() . '/' . $controller . '/' . $method . '/' . implode('/',$args);
-
-        header('Location: ' . $location);
-        exit;
-    }
-
-	public function redirectUrl($url) {
-        header('Location: ' . $url);
-        exit;
-    }
-
 	public function link($controller = '', $action = '') {
 		$ds = $controller && $action ? '/' : '';
-		return $ds.$this->router->getLanguage().$ds.$controller.$ds.$action;
+		$prefixLang = !empty($this->router->getMethodPrefix()) ? $this->router->getMethodPrefix() : $this->router->getLanguage();
+		return $ds.$prefixLang.$ds.$controller.$ds.$action;
     }
 
 	public function setTitle($text = '') {
@@ -166,23 +134,4 @@ class General {
 	public function getTitle() {
 		return $this->title;
     }
-
-	public function errorCode($code = 404, $message = '', $temp = false) {
-		http_response_code($code);
-		$this->errorMessage = $message;
-		if (empty($message) || !!$temp) {
-			$path = $this->config['viewPath'].'error'.$code.'.html';
-			if (file_exists($path)) {
-				ob_start();
-				include($path);
-				$result = ob_get_clean();
-				print($result);
-			} else {
-				$this->logger->log('Failed to include '.$this->config['viewPath'].'error'.$code.'.html', true);
-			}
-		} else {
-			print($message);
-		}
-		exit;
-	}
 }

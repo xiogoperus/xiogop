@@ -8,7 +8,7 @@ class HomeController extends Controller {
         parent::__construct($data);
    	}
 
-    public function index($req, $params) {
+    public function index($req, $res, $params) {
         $this->app->setTitle($this->app->t('home'));
          $id = count($params) ? $params[0] : -1;
          $user = new User();
@@ -18,7 +18,7 @@ class HomeController extends Controller {
         return $this->app->view->render('index', array('model' => $user));
     }
 
-    public function aboutus($req, $params) {
+    public function aboutus($req, $res, $params) {
         return $this->app->view->render('xren', array('hello' => 'Hello world'));
     }
 }

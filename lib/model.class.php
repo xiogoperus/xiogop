@@ -3,6 +3,7 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class Model extends RedBean_SimpleModel {
+	
 	public $id = null;
 
 	protected $tableName = null;

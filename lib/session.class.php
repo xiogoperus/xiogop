@@ -17,8 +17,8 @@ class Session {
            self::$flashMessage = $message;
        }
 
-       public static function hasFlash($message) {
-           return is_null(self::$flashMessage);
+       public static function hasFlash() {
+           return !is_null(self::$flashMessage);
        }
 
        public static function flash() {

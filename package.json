@@ -4,7 +4,11 @@
     "description": "Xiogop is an open source MVC Mini Framework provided free for use under the GNU General Public License.",
     "main": "index.js",
     "scripts": {
-        "watch": "webpack -w --config webpack.config.js"
+        "watch-site": "webpack -w --config webpack.public.config.js",
+        "watch-admin": "webpack -w --config webpack.admin.config.js",
+        "build-site": "webpack -p --config webpack.public.config.js",
+        "build-admin": "webpack -p --config webpack.admin.config.js",
+        "ipack": "cd ./public && bower install --allow-root"
     },
     "repository": {
         "type": "git",
@@ -29,6 +33,7 @@
         "url-loader": "^0.6.2",
         "less": "^2.7.2",
         "less-loader": "^4.0.5",
-        "webpack": "^3.6.0"
+        "webpack": "^3.6.0",
+        "bower": "^1.8.2"
     }
 }

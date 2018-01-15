@@ -20,7 +20,7 @@ class Request {
 class RequestData {
     protected $data = null;
 
-    protected $coocie = null;
+    protected $cookie = null;
 
     protected $method = null;
 
@@ -63,7 +63,7 @@ class RequestData {
         return $this->method;
     }
 
-    public function getToken() {
+    public function getCookieToken() {
         if(isset($_COOKIE['token'])) {
             return $_COOKIE['token'];
         }
@@ -72,7 +72,8 @@ class RequestData {
 
     public function getCookie($key) {
         if(isset($_COOKIE[$key])) {
-            return $_COOKIE[$key];
+            $this->cookie = $_COOKIE[$key];
+            return $this->cookie;
         }
         return null;
     }

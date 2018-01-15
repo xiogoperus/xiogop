@@ -26,4 +26,13 @@ class Token extends Model {
         return $this->value;
     }
 
+    public function setToken($value) {
+        $table = DB::findOne(  
+            $this->tableName, 
+            ' value = :value AND auth = true ', 
+            [ ':value' => $value ]  
+        );
+        $this->setModel($table);
+    }
+
 }

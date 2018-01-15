@@ -8,13 +8,13 @@ class HomeAdminController extends Controller {
         parent::__construct($data);
    	}
 
-    public function index($req, $params) {
+    public function index($req, $res, $params) {
         $this->app->setTitle('Admin Home');
-        return $this->app->view->render('index');
-    }
-
-    public function login($req) {
-        $this->app->setTitle('Auth Home');
-        return 'Good';
+        if (Auth::isLogin()) {
+            $token = Auth::getCurrentUser();
+            return $this->app->view->render('index', array('token' => $token));
+        } else {
+            $res->redirect('auth', 'index');
+        }
     }
 }

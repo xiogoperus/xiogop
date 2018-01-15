@@ -3,10 +3,6 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class Api {
-
-	function __construct() {
-        
-   	}
     
 	public function send($data = '') {
 		return $data;
@@ -27,4 +23,12 @@ class Api {
 	public function jsonToArray($string) {
 		return is_string($string) ? json_decode($string) : array();
 	}
+
+	public function jsonError($code = 404, $error = array()) {
+		http_response_code($code);
+		$json = $this->arrayToJson($error);
+		print($json);
+		exit;
+	}
+	
 }

@@ -8,7 +8,7 @@ class UserAdminController extends Controller {
         parent::__construct($data);
    	}
 
-    public function index($req, $params) {
+    public function index($req, $res, $params) {
         $this->app->setTitle($this->app->t('User'));
 
         $model = new User();
@@ -16,7 +16,7 @@ class UserAdminController extends Controller {
         return $this->app->view->render('index', array('model' => $model));
     }
 
-    public function add($req, $params) {
+    public function add($req, $res, $params) {
         $model = new User(array(
             'firstName' => 'Vasssa',
             'lastName' => 'Petrssv',
@@ -26,13 +26,13 @@ class UserAdminController extends Controller {
         ));
         $id = $model->save(null, 'email');
         if(!is_null($id)) {
-            $this->app->redirect('user', 'index', array($id));
+            $res->redirect('user', 'index', array($id));
         } else {
-            $this->app->errorCode(500, '- Email already exists', true);
+            $res->errorCode(500, '- Email already exists', true);
         }
     }
-
-    public function update($req, $params) {
+//// helper form ---------------------------------
+    public function update($req, $res, $params) {
         $model = new User(array(
             'firstName' => 'Faina',
             'lastName' => 'Rudes',
@@ -41,12 +41,12 @@ class UserAdminController extends Controller {
         ));
         
         $id = $model->save(count($params) ? $params[0] : -1);
-        $this->app->redirect('user', 'index', array($id));
+        $res->redirect('user', 'index', array($id));
     }
 
-    public function delete($req, $params) {
+    public function delete($req, $res, $params) {
         $model = new User();
         $isRemoved = $model->remove(count($params) ? $params[0] : -1);
-        $this->app->redirect('user', 'index', array($id));
+        $res->redirect('user', 'index', array($id));
     }
 }
