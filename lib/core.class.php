@@ -8,7 +8,7 @@ class Core
 {
 
 	public static function getVersion() {
-		return 'Xiogop v1.2.1';
+		return '1.2.1';
 	}
 
 	public static $app = null;
