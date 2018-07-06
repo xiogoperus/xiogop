@@ -1,4 +1,7 @@
-<div class="page"> 
-<h4 class="welcome">Dashborad</h4>
-    <?php var_dump($data);?>
+<?php echo $this->renderPartial('sidebarAdmin', array('sidebar'=>$data['sidebar']));?>
+<div class="view">
+    <div class="page">
+        <h4 class="welcome">Dashborad</h4>
+        <?php var_dump($data);?>
+    </div>
 </div>

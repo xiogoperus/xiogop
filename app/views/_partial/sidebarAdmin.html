@@ -1,0 +1,12 @@
+<div class="sidebar cyan darken-3">
+    <ul class="right hide-on-med-and-down">
+    	<?php
+    		$links = $data && $data['sidebar'] ? $data['sidebar']['links'] : array();
+			foreach ($links as $item) : 
+		?>
+        <li>
+            <a href="<?=Xiogop::app()->link('home', 'index');?>"><?=$item?></a>
+        </li>
+    	<?php endforeach; ?>
+    </ul>
+</div>

@@ -49,7 +49,7 @@
                                 <a href="<?=Xiogop::app()->link('setting', 'index');?>">Settings</a>
                             </li>
                             <li>
-                                <a href="<?=Xiogop::app()->link('auth', 'logout');?>">Sign out</a>
+                                <a class="grey" href="<?=Xiogop::app()->link('auth', 'logout');?>">Sign out</a>
                             </li>
                         </ul>
                     </div>
@@ -58,18 +58,7 @@
         </header>
         <?php endif; ?>
         <main class="<?php echo Auth::isLogin() ? 'teal darken-1' : 'lime lighten-5' ?>">
-            <?php if (Auth::isLogin()) : ?>
-            <div class="sidebar cyan darken-3">
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="<?=Xiogop::app()->link('home', 'index');?>">Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-            <?php endif; ?>
-            <div class="view">
-                <?=Xiogop::app()->view->getContent('content');?>
-            </div>
+            <?=Xiogop::app()->view->getContent('content');?>
         </main>
         <?php if (Auth::isLogin()) : ?>
         <footer class="page-footer grey darken-3">

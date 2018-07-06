@@ -12,7 +12,14 @@ class HomeAdminController extends Controller {
         $this->app->setTitle('Admin Home');
         if (Auth::isLogin()) {
             $token = Auth::getCurrentUser();
-            return $this->app->view->render('index', $token);
+            return $this->app->view->render('index', array(
+                'sidebar' => array(
+                    'links' => array(
+                        'home' => 'ds',
+                        'hum' => 'sadasa'
+                    )
+                )
+            ));
         } else {
             $res->redirect('auth', 'index');
         }

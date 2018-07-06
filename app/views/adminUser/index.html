@@ -1,7 +1,8 @@
-<div class="page">
-    <h2>User: <span><?=$this->getData('model')->firstName?></span></h2>
-
-    <?php
+<?php echo $this->renderPartial('sidebarAdmin');?>
+<div class="view">
+    <div class="page">
+        <h2>User: <span><?=$this->getData('model')->firstName?></span></h2>
+        <?php
         $model = $this->getData('model');
         foreach ($model as $key => $value) {
             if ($key != 'password') {
@@ -11,4 +12,5 @@
             }
         }
     ?>
+    </div>
 </div>

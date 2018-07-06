@@ -62,9 +62,6 @@ class View {
 	}
 
     public function render($templateName = null, $data = array()) {
-        if (!$this->router) {
-            return false;
-        }
 
         $data = is_array($data) ? $data : get_object_vars($data);
 
@@ -76,7 +73,34 @@ class View {
 
         ob_start();
         
-        include($this->path);
+        if (file_exists($this->path)) {
+            include($this->path); 
+        } else {
+            return '';
+        }
+        
+        $result = ob_get_clean();
+
+        return $result.PHP_EOL;
+    }
+
+    public function renderPartial($partialName = null, $data = array()) {
+
+        $data = is_array($data) ? $data : get_object_vars($data);
+
+        if (!$partialName) { return false; }
+
+        $this->data = count($this->data) ? $this->data : $data;
+
+        $this->path = Xiogop::app()->config['viewPath'].'_partial'.DS.$partialName.'.html';
+
+        ob_start();
+
+        if (file_exists($this->path)) {
+            include($this->path); 
+        } else {
+            return '';
+        }
         
         $result = ob_get_clean();
 
