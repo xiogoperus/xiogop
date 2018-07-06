@@ -2,9 +2,9 @@ nbproject/
 *.sublime-workspace
 .hidden
 debub.log
-static/public/css/
-logs/
-node_modules/
-static/uploads/
+public/site/css/
+public/adm/css/
+logs
+node_modules
+public/uploads/
 public/bower_components
-static/admin/bower_components
