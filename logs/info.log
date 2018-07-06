@@ -1695,3 +1695,84 @@ Stack trace:
 [Fri Jul 06 05:31:56 2018] Failed to include class R
 [Fri Jul 06 05:31:56 2018] Failed to include class Model_Users
 [Fri Jul 06 05:31:56 2018] Failed to include class Model_Users
+[Fri Jul 06 05:45:33 2018] Failed to include class R
+[Fri Jul 06 05:45:33 2018] Failed to include class Model_Users
+[Fri Jul 06 05:45:33 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:33 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:33 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:33 2018] Failed to include class R
+[Fri Jul 06 05:45:33 2018] Template "D:\Projects\xiogop\app\views\site\css.html" file is not found!
+[Fri Jul 06 05:45:33 2018] Failed to include class SiteController
+[Fri Jul 06 05:45:47 2018] Failed to include class R
+[Fri Jul 06 05:45:47 2018] Failed to include class Model_Users
+[Fri Jul 06 05:45:47 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:47 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:47 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:45:47 2018] Failed to include class R
+[Fri Jul 06 05:45:47 2018] Failed to include class R
+[Fri Jul 06 05:45:47 2018] Failed to include class R
+[Fri Jul 06 05:45:47 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:45:47 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:45:47 2018] Failed to include class R
+[Fri Jul 06 05:45:47 2018] Template "D:\Projects\xiogop\app\views\bower_components\jquery.html" file is not found!
+[Fri Jul 06 05:45:47 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:45:47 2018] Template "D:\Projects\xiogop\app\views\site\css.html" file is not found!
+[Fri Jul 06 05:45:47 2018] Failed to include class SiteController
+[Fri Jul 06 05:45:47 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:45:47 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:45:48 2018] Failed to include class R
+[Fri Jul 06 05:45:48 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:45:48 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:02 2018] Failed to include class R
+[Fri Jul 06 05:47:02 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:02 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:02 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:02 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:02 2018] Failed to include class R
+[Fri Jul 06 05:47:02 2018] Failed to include class R
+[Fri Jul 06 05:47:02 2018] Template "D:\Projects\xiogop\app\views\bower_components\jquery.html" file is not found!
+[Fri Jul 06 05:47:02 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:02 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:02 2018] Failed to include class R
+[Fri Jul 06 05:47:02 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:02 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:02 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:03 2018] Failed to include class R
+[Fri Jul 06 05:47:03 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:03 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:11 2018] Failed to include class R
+[Fri Jul 06 05:47:11 2018] Failed to include class R
+[Fri Jul 06 05:47:11 2018] Failed to include class R
+[Fri Jul 06 05:47:11 2018] Failed to include class R
+[Fri Jul 06 05:47:11 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:11 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:11 2018] Template "D:\Projects\xiogop\app\views\bower_components\jquery.html" file is not found!
+[Fri Jul 06 05:47:11 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:11 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:11 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:11 2018] Failed to include class R
+[Fri Jul 06 05:47:11 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:11 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:12 2018] Failed to include class R
+[Fri Jul 06 05:47:12 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:12 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:12 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:14 2018] Failed to include class R
+[Fri Jul 06 05:47:14 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:14 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:14 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:14 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:17 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:17 2018] Failed to include class R
+[Fri Jul 06 05:47:17 2018] Template "D:\Projects\xiogop\app\views\bower_components\materialize.html" file is not found!
+[Fri Jul 06 05:47:17 2018] Failed to include class Bower_componentsController
+[Fri Jul 06 05:47:22 2018] Failed to include class R
+[Fri Jul 06 05:47:22 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:22 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:22 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:24 2018] Failed to include class Model_Tokens
+[Fri Jul 06 05:47:26 2018] Failed to include class R
+[Fri Jul 06 05:47:26 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:28 2018] Failed to include class R
+[Fri Jul 06 05:47:28 2018] Failed to include class Model_Users
+[Fri Jul 06 05:47:28 2018] Failed to include class Model_Users
