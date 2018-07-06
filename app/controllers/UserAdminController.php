@@ -9,7 +9,7 @@ class UserAdminController extends Controller {
    	}
 
     public function index($req, $res, $params) {
-        $this->app->setTitle($this->app->t('User'));
+        $this->app->setTitle('Test');
 
         $model = new User();
         $model->getOne(count($params) ? $params[0] : -1);

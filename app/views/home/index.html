@@ -1,16 +1,31 @@
 <div class="page">
-    <h2>Welcome to Xiogop</h2>
-    <?php
-    $test = $this->getData('test');
-    /*$model = $this->getData('model');
-    foreach ($model as $value) {
-        echo '<div>'.$value.'</div>';
-    }*/
-    ?>
-
-
-        <div id="result">Тут будет ответ от сервера</div><br /><br />
-        <div onclick="SendGet();">Отправить GET запрос через Ajax</div><br />
+    <h4><?=Lang::t('welcome', 'content');?> <i class="material-icons">mood</i></h4>
+    <h5> <?=Lang::t('serverResponse', 'content');?> </h5>
+    <div class="center-align yellow lighten-5">
+        <br />
+        <div id="result" class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                  <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+            </div>    
+        </div>
+        <br /> 
+        <br /> 
+    </div>
+    <br />
+    <div class="input-field">
+        <input id="userId" type="text"></input>   
+        <label for="userId">User id</label>
+    </div>
+    <br />
+    <button class="waves-effect waves-light btn tooltipped" data-position="right" data-tooltip="<?=Lang::t('ajaxInfo1', 'info');?>" onclick="SendGet();"><?=Lang::t('send', 'form');?></button><br />
 
 </div>
 <script type="text/javascript">
@@ -32,18 +47,27 @@
     }
 
     function SendGet() {
-        //отправляю GET запрос и получаю ответ
+        var input = document.getElementById('userId');
+        var output = document.getElementById('result');
         var xmlhttp = getXmlHttp()
         xmlhttp.open('POST', '/api/main/index', false);
         var data = {};
-        data.x = '34';
-        data.y = '54';
-        data.z = '35';
-        data.tr = [];
+        data.id = Number(input.value);
         xmlhttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xmlhttp.send(JSON.stringify(data));
         if (xmlhttp.status == 200) {
-            console.log(xmlhttp.responseText);
+            var data = JSON.parse(xmlhttp.responseText);
+            if (data) {
+                output.className = '';
+                output.innerHTML = '';
+                var element1 = document.createElement('div');
+                var element2 = document.createElement('div');
+
+                element1.innerHTML = 'First Name:' + (data.firstName || '');
+                element2.innerHTML = 'Last Name:' + (data.lastName || '');
+                output.appendChild(element1);
+                output.appendChild(element2);
+            }
         }
     }
 </script>

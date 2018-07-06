@@ -6,15 +6,10 @@ class Lang {
 
     protected static $languageData = null;
 
-    protected static $app = null;
+    protected static $location = null;
 
-    public static function load($app = null) {
-        if (!is_null($app)) {
-            self::$app = $app;
-        } else {
-            return false;
-        }
-        $langCode = self::$app->router->getLanguage();
+    public static function load() {
+        $langCode = Xiogop::app()->router->getLanguage();
         $langFilePath = ROOT_DIR.DS.'lang'.DS.strtolower($langCode).'.php';
 		if(file_exists($langFilePath)) {
 			self::$languageData = include($langFilePath);
@@ -24,15 +19,12 @@ class Lang {
 		}
 	}
 
-	public static function swith($langCode = 'en') {
-        if (is_null(self::$app)) {
-            return null;
-        }
-		self::$location = self::$app->config['baseUrl'].'/'
+	public static function change($langCode = 'en') {
+		self::$location = Xiogop::app()->config['baseUrl'].'/'
 							.$langCode.'/'
-							.self::$app->router->getController().'/'
-							.self::$app->router->getAction().'/'
-							.implode('/', self::$app->router->getParams());
+							.Xiogop::app()->router->getController().'/'
+							.Xiogop::app()->router->getAction().'/'
+							.implode('/', Xiogop::app()->router->getParams());
 		return self::$location;
 	}
 

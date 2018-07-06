@@ -7,63 +7,80 @@
         <?=Xiogop::app()->getTitle();?>
     </title>
     <base href="/" />
-    <link rel="stylesheet" href="./public/css/main.css" />
-    <link rel="stylesheet" href="./public/css/ext/xio.css" />
+    <meta http-equiv="Cache-control" content="public" />
+    <link rel="shortcut icon" href="./site/img/favicon.ico?3" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.css" />
+    <link rel="stylesheet" href="./site/css/main.css" />
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <header>
-            <ul class="lang">
-                <li class="en<?=Xiogop::app()->router->getLanguage() == 'en' ? ' active' : '';?>">
-                    <a href="<?=Xiogop::app()->swithLanguage('en');?>"></a>
-                </li>
-                <li class="ru<?=Xiogop::app()->router->getLanguage() == 'ru' ? ' active' : '';?>">
-                    <a href="<?=Xiogop::app()->swithLanguage('ru');?>"></a>
-                </li>
-            </ul>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="<?=Xiogop::app()->link('home', 'index');?>"><?=Xiogop::app()->t('home');?></a></li>
-                    <li><a href="<?=Xiogop::app()->link('home', 'test');?>">Test</a></li>
+        <header class="accent-1">
+            <div class="container">
+                <ul class="lang">
+                    <li class="en<?=Xiogop::app()->router->getLanguage() == 'en' ? ' active' : ' last';?>">
+                        <a class="grey-text text-lighten-3" href="<?=Lang::change('en');?>">Eng</a>
+                    </li>
+                    <li class="ru<?=Xiogop::app()->router->getLanguage() == 'ru' ? ' active' : ' last';?>">
+                        <a class="grey-text text-lighten-3" href="<?=Lang::change('ru');?>">Rus</a>
+                    </li>
                 </ul>
-            </nav>
-
+                <nav>
+                    <div class="logo"><img src="./site/img/logo.png" alt /></div>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="<?=Xiogop::app()->link('home', 'index');?>">
+                                <?=Lang::t('home', 'pages');?>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=Xiogop::app()->link('blog', 'index');?>">
+                                <?=Lang::t('blog', 'pages');?>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <div class="view">
-                <?=Xiogop::app()->view->getContent('content');?>
+                <div class="container">
+                    <?=Xiogop::app()->view->getContent('content');?>
+                </div>
             </div>
         </main>
-        <footer class="footer-block overflow-hidden">
-            <nav>
-                <ul>
-                    <li><a href="/home/index">Home</a></li>
-                    <li><a href="/home/test">Test</a></li>
+        <footer class="page-footer footer-block overflow-hidden">
+            <div class="container">
+                <ul class="foot">
+                    <li>
+                        <a class="grey-text text-lighten-3" href="<?=Xiogop::app()->link('Home', 'index');?>">
+                            <?=Lang::t('home', 'pages');?>
+                        </a>
+                    </li>
+                    <li class="grey-text text-lighten-3">|</li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="<?=Xiogop::app()->link('blog', 'index');?>">
+                            <?=Lang::t('blog', 'pages');?>
+                        </a>
+                    </li>
+                    <li class="grey-text text-lighten-3">|</li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="<?=Xiogop::app()->link('home', 'hello');?>">
+                            Hello
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-            <div class="clear"></div>
-            <div class="copy">
+                <br />
+                <div class="clear"></div>
+            </div>
+            <div class="footer-copyright copy-center">
                 <span>Copyright Xiogop &copy 2017</span>
             </div>
         </footer>
     </div>
-    <script src="./shared/js/xio.js"></script>
-    <script type="text/javascript">
-        xs.init({
-            contentElement: document.querySelector('.wrapper'),
-            menuElements: [
-                document.querySelector('nav > .main-nav')
-            ],
-            insertCloneButton: document.querySelector('header'),
-            menuFixed: {
-                isFixed: true,
-                topOffset: 56
-            }
-        }, function(self) {
-            console.log('Xio Init');
-        });
-    </script>
+    <script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
 </body>
 
 </html>

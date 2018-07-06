@@ -3,7 +3,6 @@
 defined('_XIO') or die('No direct script access allowed');
 
 class View {
-    protected $app = null;
 
 	protected $data;
 
@@ -16,28 +15,30 @@ class View {
     public function getDefaultViewPath($router) {
         $controllerDir = $router->getController();
         $templateName = $router->getAction().'.html';
-        return $this->app->config['viewPath'].$controllerDir.DS.$templateName;
+        return Xiogop::app()->config['viewPath'].$controllerDir.DS.$templateName;
     }
 
     public function getDefaultLayoutPath() {
-        return $this->app->config['viewPath'].$this->app->config['viewLayout'].'.html';
+        return Xiogop::app()->config['viewPath'].Xiogop::app()->config['viewLayout'].'.html';
     }
 
-	function __construct($app = null, $data = array(), $layoutPath = null, $path = null) {
-        $this->app = $app;
-        $this->router = $this->app->router;
+	function __construct($data = array(), $layoutPath = null, $path = null) {
+
+        $this->router = Xiogop::app()->router;
+
         if (!$layoutPath) {
             $layoutPath = $this->getDefaultLayoutPath();
         }
+        
         if (!$path) {
             $path = $this->getDefaultViewPath($this->router);
         }
         
         if (!file_exists($layoutPath)) {
-            $this->app->logger->log('Template layout file is not found!', false);
+            Xiogop::app()->logger->log('Template layout file is not found!', false);
         }
         if (!file_exists($path)) {
-            $this->app->logger->log('Template "'.$path.'" file is not found!', false);
+            Xiogop::app()->logger->log('Template "'.$path.'" file is not found!', false);
         }
         $this->data = $data;
         $this->layoutPath = $layoutPath;
@@ -53,7 +54,7 @@ class View {
 
         ob_start();
         
-        include($this->app->config['viewPath'].$layout.$this->app->config['viewLayout'].'.html');
+        include(Xiogop::app()->config['viewPath'].$layout.Xiogop::app()->config['viewLayout'].'.html');
 
         $content = ob_get_clean();
 
@@ -71,7 +72,7 @@ class View {
 
         $this->data = count($this->data) ? $this->data : $data;
 
-        $this->path = $this->app->config['viewPath'].$this->router->getMethodPrefix().$this->router->getController().DS.$templateName.'.html';
+        $this->path = Xiogop::app()->config['viewPath'].$this->router->getMethodPrefix().$this->router->getController().DS.$templateName.'.html';
 
         ob_start();
         

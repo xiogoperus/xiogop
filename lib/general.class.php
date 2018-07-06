@@ -24,21 +24,21 @@ class General {
 	}
 
 	function __construct() {
-		// load congig files
+		// Load config files
 		$files=glob(ROOT_DIR.DS.'config'.DS.'*.config.php');
 		foreach ($files as $filename)
 			require_once $filename;
-		// autoload class files
+		// Autoload class files
 		spl_autoload_register(array($this, 'autoload'));
 		// Logger init
 		Logger::$PATH = ROOT_DIR.DS.'logs';
 		$logger = new Logger();
 		$this->logger = $logger;
 		$this->title = $config['siteName'];
-		// config
+		// Config
 		$this->config = $config;
 		$this->dbConfig = $dbConfig;
-		// is set database
+		// Is set database
 		Utils::loadExtension('rb\rb', $logger);
 		Db::isSetDatabase($this->dbConfig, $this->logger);
 		// Router init
@@ -65,14 +65,14 @@ class General {
 
 	public function process() {
 		try {
-			//process config 
+			// Process config 
 			Config::set('timeCookie', 3600);
-			// start session
+			// Start session
 			Session::start();
 			// Db setup
 			$conectionString = 'mysql:host='.$this->dbConfig['dbHost'].';dbname='.$this->dbConfig['dbname'];
 			Db::setup($conectionString, $this->dbConfig['user'], $this->dbConfig['password']);
-			$response = new Response($this);
+			$response = new Response();
 			$request = Request::getRequestData();
 			$cookieToken = $request->getCookieToken();
         	Auth::setToken($cookieToken);
@@ -91,7 +91,7 @@ class General {
 					$response->errorCode(404, '"'.$this->router->getApiController().'"- controller not allowed');
 				}
 			} else {
-				$this->view = new View($this);
+				$this->view = new View();
 				if (!Lang::load($this)) {
 					$this->logger->log('Language file not found: '.$langFilePath, false);
 				}

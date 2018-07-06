@@ -1,13 +1,25 @@
 <?php
 return array(
     'validations' => array(
-        'emptyFields' => 'empty fields',
-        'userNotFound' => 'user not found'
+        'emptyFields' => 'Empty fields',
+        'userNotFound' => 'User not found'
     ),
     'errors' => array(
         'emptyFields' => 'empty fields2',
         'userNotFound' => 'user not found2'
     ),
-    'home' => 'Home',
-    'ixvi' => 'duck'
+    'pages' => array(
+        'home' => 'Home',
+        'blog' => 'Blog'
+    ),
+    'content' => array(
+        'welcome' => 'Welcome!',
+        'serverResponse' => 'Response from server: ',
+    ),
+    'info' => array(
+        'ajaxInfo1' => 'Send POST request via Ajax'
+    ),
+    'form' => array(
+        'send' => 'Send'
+    )
 );
