@@ -10,7 +10,7 @@ class AuthAdminController extends Controller {
    	}
 
     public function index($req, $res, $params) {
-        $this->app->setTitle('Admin Login');
+        $this->app->setTitle('Sign in');
         if(count($params) && Lang::hasKey($params[0], 'validations')) {
            Session::setFlash(Lang::t($params[0], 'validations')); 
         }
