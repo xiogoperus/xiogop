@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // fix php version
 if (version_compare(PHP_VERSION, '5.6.3', '<') ) {
   exit("Xiogop will only run on PHP version 5.6.3 or greater!\n");

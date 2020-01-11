@@ -6,11 +6,11 @@ class Session {
        protected static $flashMessage;
 
        public static function start() {
-           session_start();
+           if(session_status()!= PHP_SESSION_ACTIVE) { @ob_start(); session_start(); }
        }
 
        public static function destroy() {
-           session_destroy();
+           if(session_status()!= PHP_SESSION_ACTIVE) session_destroy();
        }
 
        public static function setFlash($message) {

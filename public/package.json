@@ -1,0 +1,26 @@
+{
+    "name": "xiogop",
+    "version": "1.2.2",
+    "description": "Xiogop is an open source MVC Mini Framework provided free for use under the GNU General Public License.",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiogoperus/xiogop.git"
+    },
+    "keywords": [
+        "MVC",
+        "mini",
+        "Framework"
+    ],
+    "author": "Xiogoperus",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xiogoperus/xiogop/issues"
+    },
+    "homepage": "https://github.com/xiogoperus/xiogop#readme",
+    "dependencies": {
+        "jquery": "^3.4.1",
+        "materialize-css": "^1.0.0"
+    }
+}

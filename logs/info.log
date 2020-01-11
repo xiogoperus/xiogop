@@ -3465,3 +3465,270 @@ Stack trace:
 [Fri Jul 06 11:33:07 2018] Failed to include class Model_Tokens
 [Fri Jul 06 11:33:07 2018] Failed to include class Model_Tokens
 [Fri Jul 06 11:33:07 2018] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:11 2020] Failed to include class R
+[Sat Jan 11 21:33:11 2020] Database xiogop created successfully\n
+[Sat Jan 11 21:33:11 2020] Failed to include class Model_Users
+[Sat Jan 11 21:33:11 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:11 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:12 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:35 2020] Failed to include class R
+[Sat Jan 11 21:33:35 2020] Failed to include class Model_Users
+[Sat Jan 11 21:33:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:33:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:27 2020] Failed to include class R
+[Sat Jan 11 21:35:27 2020] Failed to include class Model_Users
+[Sat Jan 11 21:35:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:28 2020] Failed to include class R
+[Sat Jan 11 21:35:28 2020] Failed to include class Model_Users
+[Sat Jan 11 21:35:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:29 2020] Failed to include class R
+[Sat Jan 11 21:35:29 2020] Failed to include class Model_Users
+[Sat Jan 11 21:35:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:35:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:37:20 2020] Failed to include class R
+[Sat Jan 11 21:37:20 2020] Template "C:\WinNMP\WWW\xiogop\app\views\public\index.html" file is not found!
+[Sat Jan 11 21:37:20 2020] Failed to include class PublicController
+[Sat Jan 11 21:38:01 2020] Failed to include class R
+[Sat Jan 11 21:38:01 2020] Failed to include class Model_Users
+[Sat Jan 11 21:38:01 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:38:01 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:38:01 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:41:22 2020] Failed to include class R
+[Sat Jan 11 21:41:22 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 21:42:26 2020] Failed to include class R
+[Sat Jan 11 21:42:27 2020] Failed to include class Model_Users
+[Sat Jan 11 21:42:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:42:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:42:27 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:42:28 2020] Failed to include class R
+[Sat Jan 11 21:42:28 2020] Failed to include class Model_Users
+[Sat Jan 11 21:42:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:42:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:42:28 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:32 2020] Failed to include class R
+[Sat Jan 11 21:46:32 2020] Failed to include class Model_Users
+[Sat Jan 11 21:46:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:34 2020] Failed to include class R
+[Sat Jan 11 21:46:34 2020] Failed to include class Model_Users
+[Sat Jan 11 21:46:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:35 2020] Failed to include class R
+[Sat Jan 11 21:46:35 2020] Failed to include class Model_Users
+[Sat Jan 11 21:46:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:35 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:38 2020] Failed to include class R
+[Sat Jan 11 21:46:38 2020] Failed to include class Model_Users
+[Sat Jan 11 21:46:38 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:38 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:46:38 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:57:51 2020] Failed to include class R
+[Sat Jan 11 21:57:51 2020] Failed to include class Model_Users
+[Sat Jan 11 21:57:51 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:57:51 2020] Failed to include class Model_Tokens
+[Sat Jan 11 21:57:51 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:32 2020] Failed to include class R
+[Sat Jan 11 22:00:32 2020] Failed to include class Model_Users
+[Sat Jan 11 22:00:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:36 2020] Failed to include class R
+[Sat Jan 11 22:00:36 2020] Failed to include class Model_Users
+[Sat Jan 11 22:00:36 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:36 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:00:36 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:02:19 2020] Failed to include class R
+[Sat Jan 11 22:02:20 2020] Failed to include class Model_Users
+[Sat Jan 11 22:02:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:02:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:02:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:05:21 2020] Failed to include class R
+[Sat Jan 11 22:05:21 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:05:32 2020] Failed to include class R
+[Sat Jan 11 22:05:32 2020] Failed to include class Model_Users
+[Sat Jan 11 22:05:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:05:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:05:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:20 2020] Failed to include class R
+[Sat Jan 11 22:06:20 2020] Failed to include class Model_Users
+[Sat Jan 11 22:06:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:20 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:34 2020] Failed to include class R
+[Sat Jan 11 22:06:34 2020] Failed to include class Model_Users
+[Sat Jan 11 22:06:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:06:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:29 2020] Failed to include class R
+[Sat Jan 11 22:09:29 2020] Failed to include class Model_Users
+[Sat Jan 11 22:09:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:34 2020] Failed to include class R
+[Sat Jan 11 22:09:34 2020] Failed to include class Model_Users
+[Sat Jan 11 22:09:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:09:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:30 2020] Failed to include class R
+[Sat Jan 11 22:10:30 2020] Failed to include class Model_Users
+[Sat Jan 11 22:10:30 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:30 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:30 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:32 2020] Failed to include class R
+[Sat Jan 11 22:10:32 2020] Failed to include class Model_Users
+[Sat Jan 11 22:10:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:10:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:17:00 2020] Failed to include class R
+[Sat Jan 11 22:17:00 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:17:02 2020] Failed to include class R
+[Sat Jan 11 22:17:03 2020] Failed to include class Model_Users
+[Sat Jan 11 22:17:03 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:17:03 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:17:03 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:18:23 2020] Failed to include class R
+[Sat Jan 11 22:18:23 2020] Failed to include class Model_Users
+[Sat Jan 11 22:18:23 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:18:23 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:18:23 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:22:41 2020] Failed to include class R
+[Sat Jan 11 22:22:41 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:28:14 2020] Failed to include class R
+[Sat Jan 11 22:28:14 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:29:28 2020] Failed to include class R
+[Sat Jan 11 22:29:28 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:30:42 2020] Failed to include class R
+[Sat Jan 11 22:30:42 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:30:46 2020] Failed to include class R
+[Sat Jan 11 22:30:46 2020] Failed to include class R
+[Sat Jan 11 22:30:46 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:30:46 2020] Failed to include class SiteController
+[Sat Jan 11 22:31:22 2020] Failed to include class R
+[Sat Jan 11 22:31:22 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:31:23 2020] Failed to include class R
+[Sat Jan 11 22:31:24 2020] Failed to include class R
+[Sat Jan 11 22:31:24 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:31:24 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:23 2020] Failed to include class R
+[Sat Jan 11 22:32:24 2020] Failed to include class R
+[Sat Jan 11 22:32:24 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:24 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:25 2020] Failed to include class R
+[Sat Jan 11 22:32:25 2020] Failed to include class R
+[Sat Jan 11 22:32:25 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:25 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:26 2020] Failed to include class R
+[Sat Jan 11 22:32:26 2020] Failed to include class R
+[Sat Jan 11 22:32:26 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:26 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:27 2020] Failed to include class R
+[Sat Jan 11 22:32:27 2020] Failed to include class R
+[Sat Jan 11 22:32:27 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:27 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:28 2020] Failed to include class R
+[Sat Jan 11 22:32:29 2020] Failed to include class R
+[Sat Jan 11 22:32:29 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:29 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:30 2020] Failed to include class R
+[Sat Jan 11 22:32:30 2020] Failed to include class R
+[Sat Jan 11 22:32:30 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:30 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:33 2020] Failed to include class R
+[Sat Jan 11 22:32:33 2020] Failed to include class Model_Users
+[Sat Jan 11 22:32:33 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:32:33 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:32:34 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:32:34 2020] Failed to include class R
+[Sat Jan 11 22:32:34 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:34 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:37 2020] Failed to include class R
+[Sat Jan 11 22:32:37 2020] Failed to include class R
+[Sat Jan 11 22:32:37 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:37 2020] Failed to include class SiteController
+[Sat Jan 11 22:32:51 2020] Failed to include class R
+[Sat Jan 11 22:32:51 2020] Template "C:\WinNMP\WWW\xiogop\app\views\site\css.html" file is not found!
+[Sat Jan 11 22:32:51 2020] Failed to include class SiteController
+[Sat Jan 11 22:33:01 2020] Failed to include class R
+[Sat Jan 11 22:33:01 2020] Template "C:\WinNMP\WWW\xiogop\app\views\css\main.css.html" file is not found!
+[Sat Jan 11 22:33:01 2020] Failed to include class CssController
+[Sat Jan 11 22:36:22 2020] Failed to include class R
+[Sat Jan 11 22:36:26 2020] Failed to include class R
+[Sat Jan 11 22:36:28 2020] Failed to include class R
+[Sat Jan 11 22:36:29 2020] Failed to include class Model_Users
+[Sat Jan 11 22:36:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:29 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:30 2020] Failed to include class R
+[Sat Jan 11 22:36:32 2020] Failed to include class R
+[Sat Jan 11 22:36:32 2020] Failed to include class Model_Users
+[Sat Jan 11 22:36:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:32 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:41 2020] Failed to include class R
+[Sat Jan 11 22:36:41 2020] Failed to include class Model_Users
+[Sat Jan 11 22:36:41 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:41 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:41 2020] Failed to include class Model_Tokens
+[Sat Jan 11 22:36:43 2020] Failed to include class R
+[Sat Jan 11 22:37:26 2020] Failed to include class R
+[Sat Jan 11 22:37:56 2020] Failed to include class R
+[Sat Jan 11 22:37:57 2020] Failed to include class R
+[Sat Jan 11 22:37:58 2020] Failed to include class R
+[Sat Jan 11 22:37:59 2020] Failed to include class R
+[Sat Jan 11 22:38:00 2020] Failed to include class R
+[Sat Jan 11 22:38:00 2020] Failed to include class R
+[Sat Jan 11 22:41:30 2020] Failed to include class R
+[Sat Jan 11 22:41:31 2020] Failed to include class R
+[Sat Jan 11 22:41:32 2020] Failed to include class R
+[Sat Jan 11 22:41:33 2020] Failed to include class R
+[Sat Jan 11 22:44:34 2020] Failed to include class R
+[Sat Jan 11 22:44:46 2020] Failed to include class R
+[Sat Jan 11 22:45:11 2020] Failed to include class R
+[Sat Jan 11 22:45:39 2020] Failed to include class R
+[Sat Jan 11 22:45:41 2020] Failed to include class R
+[Sat Jan 11 22:46:43 2020] Failed to include class R
+[Sat Jan 11 22:46:52 2020] Failed to include class R
+[Sat Jan 11 22:47:05 2020] Failed to include class R
+[Sat Jan 11 22:49:00 2020] Failed to include class R
+[Sat Jan 11 22:49:10 2020] Failed to include class R
+[Sat Jan 11 22:49:18 2020] Failed to include class R
+[Sat Jan 11 22:50:40 2020] Failed to include class R
+[Sat Jan 11 22:51:08 2020] Failed to include class R
+[Sat Jan 11 22:51:27 2020] Failed to include class R
+[Sat Jan 11 22:51:59 2020] Failed to include class R
+[Sat Jan 11 22:52:00 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:52:02 2020] Failed to include class R
+[Sat Jan 11 22:52:03 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:52:05 2020] Failed to include class R
+[Sat Jan 11 22:52:06 2020] Failed to include class R
+[Sat Jan 11 22:52:12 2020] Failed to include class R
+[Sat Jan 11 22:52:30 2020] Failed to include class R
+[Sat Jan 11 22:52:38 2020] Failed to include class R
+[Sat Jan 11 22:53:21 2020] Failed to include class R
+[Sat Jan 11 22:53:33 2020] Failed to include class R
+[Sat Jan 11 22:54:21 2020] Failed to include class R
+[Sat Jan 11 22:54:22 2020] Failed to include class R
+[Sat Jan 11 22:54:23 2020] Failed to include class R
+[Sat Jan 11 22:54:32 2020] Failed to include class R
+[Sat Jan 11 22:54:32 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:54:37 2020] Failed to include class R
+[Sat Jan 11 22:54:39 2020] Failed to include class R
+[Sat Jan 11 22:54:58 2020] Failed to include class R
+[Sat Jan 11 22:54:58 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:55:01 2020] Failed to include class R
+[Sat Jan 11 22:55:02 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:55:07 2020] Failed to include class R
+[Sat Jan 11 22:55:07 2020] Template "C:\WinNMP\WWW\xiogop\app\views\index.php\index.html" file is not found!
+[Sat Jan 11 22:55:08 2020] Failed to include class R
+[Sat Jan 11 22:58:29 2020] Failed to include class R
+[Sat Jan 11 22:58:44 2020] Failed to include class R
+[Sat Jan 11 22:58:53 2020] Failed to include class R
