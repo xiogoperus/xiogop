@@ -1,4 +1,5 @@
 nbproject/
+npm-debug.log
 *.sublime-workspace
 .hidden
 debub.log
