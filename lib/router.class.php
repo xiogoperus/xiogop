@@ -40,7 +40,7 @@ class Router {
 
 	   $uriParts = explode('?', $this->$uri);
 	   
-	   // get path
+	   // get path ...
 	   $path = $uriParts[0];
 
 	   $pathParts = explode('/', $path);
